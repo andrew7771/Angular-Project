@@ -5,18 +5,12 @@ import { ConvertToSpacesPipe } from '../shared/convert-to-spaces.pipe';
 import { RouterModule } from '@angular/router';
 import { ProductDetailGuard } from './product-detail.guard';
 import { SharedModule } from '../shared/shared.module';
+import { ProductRoutingModule } from './product-routing.module';
 
 @NgModule({
-    imports:[
-        RouterModule.forChild([
-            { path: 'products', component: ProductListComponent},
-            { 
-                path: 'products/:id', 
-                component: ProductDetailComponent,
-                canActivate: [ProductDetailGuard]
-            }
-        ]),
-        SharedModule
+    imports:[        
+        SharedModule,
+        ProductRoutingModule
     ],
     declarations: [
         ProductListComponent,
