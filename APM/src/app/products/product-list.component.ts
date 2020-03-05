@@ -16,8 +16,8 @@ export class ProductListComponent implements  OnInit {
 
     showImage: boolean = false;
     
-     _listFilter : string;
-  errorMessage: any;
+    _listFilter : string;
+    errorMessage: any;
     public get listFilter() : string {
         return this._listFilter;
     }

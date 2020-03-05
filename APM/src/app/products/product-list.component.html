@@ -44,7 +44,13 @@
                         <td>{{product.releaseDate}}</td>
                         <td>{{product.price | currency:'USD':'symbol':'1.2-2'}}</td>
                         <td><pm-star [rating]='product.starRating'
-                            (ratingClicked)='onRatingClicked($event)'></pm-star></td>
+                            (ratingClicked)='onRatingClicked($event)'></pm-star>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm"
+                                [routerLink]="['/products', product.productId, 'edit']"> Edit
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
