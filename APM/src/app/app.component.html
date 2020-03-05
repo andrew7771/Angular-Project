@@ -3,6 +3,8 @@
   <ul class="nav nav-pills">
     <li><a [routerLink]="['/welcome']" class="nav-link">Home</a></li>
     <li><a [routerLink]="['/products']" class="nav-link">Product List</a></li>
+    <li class='nav-item'><a class='nav-link' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+      [routerLink]="['/products/0/edit']">Add Product</a></li>
   </ul>
 </nav>
 <div class="container">

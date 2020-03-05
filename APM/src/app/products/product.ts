@@ -1,4 +1,4 @@
-export interface IProduct {
+export interface Product {
     productId: number;
     productName: string;
     productCode: string;
@@ -7,4 +7,5 @@ export interface IProduct {
     description: string;
     starRating: number;
     imageUrl: string;
+    tags: string[];
 }

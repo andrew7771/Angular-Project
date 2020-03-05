@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProduct } from './product';
+import { Product } from './product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from './product.service';
 
@@ -10,7 +10,7 @@ import { ProductService } from './product.service';
 })
 export class ProductDetailComponent implements OnInit {
   pageTitle: string = 'Product Detail';
-  product: IProduct | undefined;  
+  product: Product | undefined;  
   errorMessage: any;
 
   constructor(private route: ActivatedRoute,
