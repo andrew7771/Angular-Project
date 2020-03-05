@@ -292,4 +292,5 @@
 <br>Touched: {{ customerForm.touched }}
 <br>Valid: {{ customerForm.valid }}
 <br>Value: {{ customerForm.value | json }}
+<br>Value: {{ addresses.get('0.street')?.value }}
 <br>Value: {{ customerForm.get('sendCatalog').value }}
