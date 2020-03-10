@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NumberValidators } from '../shared/number.validator';
@@ -11,7 +11,7 @@ import { ProductService } from './product.service';
   templateUrl: './product-edit.component.html',
   styleUrls: ['./product-edit.component.css']
 })
-export class ProductEditComponent implements OnInit {
+export class ProductEditComponent implements OnInit, OnDestroy {
   pageTitle = 'Product Edit';
   
   productForm: FormGroup;
@@ -19,6 +19,9 @@ export class ProductEditComponent implements OnInit {
   product: Product;
   errorMessage: string;
 
+  displayMessage: { [key: string]: string } = {};
+
+  
   constructor(private fb: FormBuilder, private route: ActivatedRoute,
     private productService: ProductService ) { }
 
@@ -40,6 +43,14 @@ export class ProductEditComponent implements OnInit {
       }
     )
 
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
+  get tags(): FormArray {
+    return this.productForm.get('tags') as FormArray;
   }
 
   getProduct(id: number): void {
