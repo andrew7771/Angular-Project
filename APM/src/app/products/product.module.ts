@@ -6,10 +6,13 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductEditComponent } from './product-edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ProductData } from './product-data';
 
 @NgModule({
     imports:[        
         SharedModule,
+        InMemoryWebApiModule.forRoot(ProductData),
         ProductRoutingModule,
         ReactiveFormsModule
     ],
