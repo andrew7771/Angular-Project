@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { ProductListComponent } from './product-list.component';
-import { ProductDetailComponent } from './product-detail.component';
-import { ProductDetailGuard } from './product-detail.guard';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDetailGuard } from './product-detail/product-detail.guard';
 import { RouterModule } from '@angular/router';
-import { ProductEditComponent } from './product-edit.component';
-import { ProductEditGuard } from './product-edit.guard';
+import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductEditGuard } from './product-edit/product-edit.guard';
 
 @NgModule({
     imports: [

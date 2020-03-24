@@ -2,11 +2,11 @@ import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef, ViewChildren }
 import { FormGroup, FormBuilder, Validators, FormArray, FormControl, FormControlName } from '@angular/forms';
 import { Subscription, Observable, merge, fromEvent } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
-import { NumberValidators } from '../shared/number.validator';
-import { Product } from './product';
-import { ProductService } from './product.service';
+import { NumberValidators } from '../../shared/number.validator';
+import { Product } from '../product';
+import { ProductService } from '../product.service';
 import { debounceTime } from 'rxjs/operators';
-import { GenericValidator } from '../shared/generic-validator';
+import { GenericValidator } from '../../shared/generic-validator';
 
 @Component({
   selector: 'pm-product-edit',
