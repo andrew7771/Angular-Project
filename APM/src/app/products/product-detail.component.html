@@ -27,6 +27,10 @@
               <div class='col-md-8'>{{product.price|currency:'USD':'symbol'}}</div>
             </div>
             <div class='row'>
+              <div class='col-md-4'>Tags:</div>
+              <div class='col-md-8' *ngFor="let tag of product.tags"><strong>{{tag}}</strong></div>
+            </div>
+            <div class='row'>
               <div class='col-md-4'>5 Star Rating:</div>
               <div class='col-md-8'>
                 <pm-star [rating]='product?.starRating'>
